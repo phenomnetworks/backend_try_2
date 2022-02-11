@@ -14,7 +14,7 @@ def nameRoute():
         request_data = request.data
         request_data = json.loads(request_data.decode('utf-8'))
         name = request_data['name']
-        response = f'Hallo {name}! Das ist Python'
+        response = f'Hallo {name}! Das ist Python!'
         return " "
 
     else:
