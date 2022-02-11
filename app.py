@@ -1,24 +1,24 @@
 from flask import Flask, jsonify, request
 import json
 
-response = ''
+question = ''
 
-app = Flask(__name__)
+app = Flask(__frage__)
 
 @app.route('/name', methods = ['GET', 'POST'])
 def nameRoute():
 
-    global response
+    global question
 
     if(request.method == 'POST'):
         request_data = request.data
         request_data = json.loads(request_data.decode('utf-8'))
-        name = request_data['name']
-        response = f'Hallo {name}! Das ist Python!'
+        frage = request_data['frage']
+        question = f'Frage: {frage}?'
         return " "
 
     else:
-        return jsonify({'name' : response})
+        return jsonify({'frage' : question})
 
-if __name__ == "__main__":
+if __frage__ == "__main__":
     app.run(debug=True)
