@@ -2,7 +2,6 @@ from flask import Flask, jsonify, request
 import json
 
 response = ''
-response2 = ''
 
 app = Flask(__name__)
 
@@ -19,22 +18,7 @@ def nameRoute():
         return " "
 
     else:
-        return jsonify({'name' : response}        
-
-@app.route('/name2', methods = ['GET', 'POST'])
-def nameRoute2():
-
-    global response2
-
-    if(request.method == 'POST'):
-        request_data = request.data
-        request_data = json.loads(request_data.decode('utf-8'))
-        name2 = request_data['name2']
-        response2 = f'Dein Name ist also {name2}, richtig?'
-        return " "
-
-    else:
-        return jsonify({'name2' : response2}                        
+        return jsonify({'name' : response}                      
                        
 if __name__ == "__main__":
     app.run(debug=True)
