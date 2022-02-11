@@ -21,7 +21,7 @@ def nameRoute():
         return " "
 
     else:
-        return jsonify({'name' : response}, {'name' : response2})        
+        return jsonify({'name' : response}, {'name2' : response2})        
 
 if __name__ == "__main__":
     app.run(debug=True)
