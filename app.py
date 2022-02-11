@@ -5,8 +5,8 @@ question = ''
 
 app = Flask(__frage__)
 
-@app.route('/name', methods = ['GET', 'POST'])
-def nameRoute():
+@app.route('/frage', methods = ['GET', 'POST'])
+def frageRoute():
 
     global question
 
