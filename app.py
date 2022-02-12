@@ -18,7 +18,15 @@ def nameRoute():
         return " "
 
     else:
-        return jsonify({'name' : 'Hallo' + response} + '!')   
+        return jsonify({'name' : 'Hallo' + response})   
 
+@app.route('/name2', methods = ['GET'])
+def nameRoute():
+
+    global response
+
+    if(request.method == 'GET'):
+        return jsonify({'name' : 'Hallo' + response})
+    
 if __name__ == "__main__":
     app.run(debug=True)
