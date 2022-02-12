@@ -24,7 +24,10 @@ def nameRoute():
 def nameRoute2():
 
     global response
-    return jsonify({'name2' : response})
+
+    response2 = f'Hello {response}!'
+
+    return jsonify({'name2' : response2})
     
 if __name__ == "__main__":
     app.run(debug=True)
